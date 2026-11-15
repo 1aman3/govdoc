@@ -1,0 +1,608 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #f3f5f8;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --navy: #1e3a8a;
+    --navy-dark: #172f72;
+    --border: #cbd2dc;
+    --muted: #526174;
+    --surface: #ffffff;
+    --focus: #f2b84b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    line-height: 1.55;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.site-header {
+    background: var(--navy);
+    color: #fff;
+}
+
+.navbar {
+    width: min(100% - 2rem, 1120px);
+    min-height: 68px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: inherit;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.page-shell {
+    width: min(100% - 2rem, 960px);
+    margin: 0 auto;
+    padding: 2.25rem 0 4rem;
+}
+
+.page-intro {
+    margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--navy);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.page-intro h1 {
+    max-width: 720px;
+    margin: 0;
+    color: #172033;
+    font-size: clamp(1.8rem, 4vw, 2.55rem);
+    line-height: 1.15;
+}
+
+.page-intro > p:last-child {
+    margin: 0.75rem 0 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.selectors-card,
+.guide-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+}
+
+.selectors-card {
+    padding: 1.25rem;
+}
+
+.selectors-card h2 {
+    margin: 0 0 1rem;
+    color: var(--navy);
+    font-size: 1.25rem;
+}
+
+.selectors {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.25rem;
+    align-items: end;
+}
+
+.form-field {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.form-field label,
+.mode-field legend {
+    color: #263247;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.55rem 2.25rem 0.55rem 0.7rem;
+    border: 1px solid #738094;
+    border-radius: 4px;
+    background: #fff;
+    color: #172033;
+}
+
+.mode-field {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.mode-field legend {
+    margin-bottom: 0.4rem;
+}
+
+.mode-control {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    color: #263247;
+}
+
+.mode-control input,
+.document-checklist input {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--navy);
+}
+
+.guide-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.guidance-note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.button {
+    min-height: 44px;
+    padding: 0.55rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button-primary {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: #fff;
+}
+
+.button-primary:hover {
+    background: var(--navy-dark);
+}
+
+.button-secondary {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    color: #fff;
+}
+
+.button-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.guide-card {
+    overflow: hidden;
+}
+
+.guide-header {
+    padding: 1.5rem 1.5rem 1.1rem;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.guide-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    line-height: 1.25;
+}
+
+.video-banner {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #aab9d6;
+    background: #eef3fb;
+}
+
+.video-banner h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.2rem;
+}
+
+.video-banner p {
+    margin: 0.4rem 0 0.9rem;
+    color: #344258;
+}
+
+.video-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.video-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.video-actions .button-secondary {
+    border-color: var(--navy);
+    color: var(--navy);
+}
+
+.video-actions .button-secondary:hover {
+    background: #dfe8f7;
+}
+
+.guide-section {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.procedure-specifications {
+    margin: 1.25rem 1.5rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid #aab9d6;
+    border-left: 5px solid var(--navy);
+    border-radius: 4px;
+    background: #f6f8fc;
+}
+
+.procedure-specifications h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.1rem;
+}
+
+.procedure-specifications p {
+    margin: 0.45rem 0;
+}
+
+.procedure-specifications ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.3rem;
+}
+
+.procedure-specifications li + li {
+    margin-top: 0.4rem;
+}
+
+.office-workflow {
+    border-color: #b7791f;
+    border-left-color: #9a5b00;
+    background: #fff8e8;
+}
+
+.office-workflow h3 {
+    color: #583b0b;
+}
+
+.guide-section h3 {
+    margin: 0 0 0.75rem;
+    color: var(--navy);
+    font-size: 1.15rem;
+}
+
+.document-checklist {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.document-checklist legend {
+    margin-bottom: 0.6rem;
+    color: #172033;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.document-checklist label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid #e1e5eb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.document-checklist label:has(input:checked) {
+    border-color: #8294c1;
+    background: #f4f6fb;
+}
+
+.document-checklist input {
+    flex: 0 0 auto;
+    margin: 0.15rem 0 0;
+}
+
+.checklist-status {
+    margin: 0.75rem 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.checklist-status.is-ready {
+    color: #17603a;
+}
+
+.guide-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 1.5rem;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.guide-details p {
+    margin: 0.65rem 0;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #174ea6;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.notes-callout {
+    margin: 1.25rem 1.5rem 0;
+    padding: 1rem 1.1rem;
+    border-left: 5px solid #b7791f;
+    background: #fff8e8;
+}
+
+.notes-callout h3 {
+    margin: 0 0 0.45rem;
+    color: #583b0b;
+    font-size: 1.05rem;
+}
+
+.notes-callout ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.notes-callout li + li {
+    margin-top: 0.35rem;
+}
+
+#steps ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+#steps li {
+    padding-left: 0.25rem;
+}
+
+#steps li + li {
+    margin-top: 0.7rem;
+}
+
+.procedure-step {
+    padding-bottom: 1rem;
+}
+
+.procedure-step + .procedure-step {
+    margin-top: 1rem;
+    border-top: 1px solid #dce1e8;
+    padding-top: 1rem;
+}
+
+.procedure-step h4 {
+    margin: 0 0 0.5rem;
+    color: #172033;
+    font-size: 1.08rem;
+}
+
+.procedure-step p {
+    margin: 0.55rem 0;
+}
+
+.procedure-step ul {
+    margin: 0.6rem 0;
+    padding-left: 1.4rem;
+}
+
+.procedure-step li li + li {
+    margin-top: 0.25rem;
+}
+
+.navigation-path {
+    padding: 0.55rem 0.7rem;
+    border-left: 3px solid #64748b;
+    background: #f3f5f8;
+    color: #263247;
+    overflow-wrap: anywhere;
+}
+
+.step-warning {
+    margin-top: 0.75rem;
+    padding: 0.7rem 0.85rem;
+    border-left: 4px solid #a83b32;
+    background: #fff0ee;
+    color: #65251f;
+}
+
+#post-submission > ol,
+.rejection-list {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+#post-submission > ol > li + li,
+.rejection-list > li + li {
+    margin-top: 0.75rem;
+}
+
+.rejection-heading {
+    margin-top: 1.5rem !important;
+}
+
+.rejection-list p {
+    margin: 0.25rem 0 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        width: min(100% - 1.25rem, 960px);
+        padding-top: 1.5rem;
+    }
+
+    .navbar {
+        width: min(100% - 1.25rem, 1120px);
+        min-height: 60px;
+    }
+
+    .selectors {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .guide-actions .button {
+        width: 100%;
+    }
+
+    .guide-header,
+    .guide-section,
+    .video-banner {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .guide-details {
+        grid-template-columns: 1fr;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .notes-callout {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .procedure-specifications {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@media print {
+    @page {
+        margin: 16mm;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+        font-size: 11pt;
+    }
+
+    .site-header,
+    .page-intro,
+    .selectors-card,
+    .guide-actions,
+    #official-portal,
+    #offline-office,
+    #fees,
+    #estimated-time,
+    #important-notes,
+    #video-tutorial,
+    #procedure-specifications,
+    #post-submission {
+        display: none !important;
+    }
+
+    .page-shell {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .guide-card {
+        overflow: visible;
+        border: 0;
+    }
+
+    .guide-header,
+    #required-documents,
+    #steps {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .guide-header {
+        padding-top: 0;
+    }
+
+    .document-checklist label {
+        break-inside: avoid;
+        border-color: #bbb;
+        background: #fff !important;
+        color: #000;
+    }
+
+    .document-checklist input {
+        print-color-adjust: exact;
+    }
+
+    #steps li {
+        break-inside: avoid;
+    }
+
+    a {
+        color: #000;
+    }
+}

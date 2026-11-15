@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Citizen Government Document Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="./" aria-label="Indian Citizen Document Guide home">
+                <span class="brand-mark" aria-hidden="true">IN</span>
+                <span id="brand-label">Citizen Document Guide</span>
+            </a>
+            <button id="language-toggle" class="button button-secondary" type="button" aria-label="Switch language to Hindi">हिं</button>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <div class="page-intro">
+            <p class="eyebrow" id="intro-eyebrow">INDIA · PUBLIC SERVICES</p>
+            <h1 id="intro-title">Find your document application steps</h1>
+            <p id="intro-description">Choose a document and service to see what to prepare and what to do next.</p>
+        </div>
+
+        <section class="selectors-card" aria-labelledby="selection-heading">
+            <h2 id="selection-heading">Choose a service</h2>
+            <div class="selectors">
+                <div class="form-field">
+                    <label id="document-label" for="document-type">Document</label>
+                    <select id="document-type">
+                        <option value="aadhaar">Aadhaar Card</option>
+                        <option value="pan">PAN Card</option>
+                        <option value="passport">Passport</option>
+                        <option value="voter">Voter ID (EPIC)</option>
+                        <option value="drivingLicence">Driving Licence</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label id="action-label" for="action-type">What do you need to do?</label>
+                    <select id="action-type">
+                        <option value="new">New Application</option>
+                        <option value="update">Update/Correction</option>
+                        <option value="surrender">Surrender/Cancel</option>
+                    </select>
+                </div>
+
+                <fieldset class="mode-field">
+                    <legend id="mode-legend">Preferred process</legend>
+                    <label class="mode-control" for="process-type">
+                        <input type="checkbox" id="process-type" checked>
+                        <span id="process-label">Online Process</span>
+                    </label>
+                </fieldset>
+            </div>
+        </section>
+
+        <div class="guide-actions">
+            <p id="guidance-note" class="guidance-note">Always confirm the latest requirements on the official service portal.</p>
+            <button id="print-guide" class="button button-primary" type="button">Print / Save PDF Guide</button>
+        </div>
+
+        <article id="guide-display" class="guide-card" aria-labelledby="guide-title">
+            <header class="guide-header">
+                <p class="eyebrow" id="guide-eyebrow">APPLICATION GUIDE</p>
+                <h2 id="guide-title">Step-by-Step Guide</h2>
+            </header>
+
+            <section id="video-tutorial" class="video-banner" aria-labelledby="video-heading"></section>
+            <section id="required-documents" class="guide-section" aria-labelledby="documents-heading"></section>
+            <div class="guide-details">
+                <div id="official-portal"></div>
+                <div id="offline-office"></div>
+                <div id="fees"></div>
+                <div id="estimated-time"></div>
+            </div>
+            <section id="procedure-specifications" class="guide-section procedure-specifications"></section>
+            <aside id="important-notes" class="notes-callout" aria-labelledby="notes-heading"></aside>
+            <section id="steps" class="guide-section" aria-labelledby="steps-heading"></section>
+            <section id="post-submission" class="guide-section" aria-labelledby="tracking-heading"></section>
+        </article>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
